@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora De Sistemas 2x2 y 3x3</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Calculadora De Sistemas De Ecuaciones</h1>
+            <h4>Julio N.</h4>
+        </div>
+    </header>    
+    
+    <div class="selec">
+        <h2>Ingresa el tamaño de tu matriz</h2>
+        <div class="Seleccion_tamaño">
+            <button class="Dos" onclick="ocultar()"><h1>2x2</h1></button>
+            <button class="tres" onclick="mostrar()"><h1>3x3</h1></button>
+        </div>
+    </div>
+    <div class="Contenedor-matriz" id="Contenedor-matriz" style="display: none">
+        <div class="Matriz">
+            <div class="Columnas" id="x"><input type="text"><input type="text"><input type="text" id="z1"></div>
+            <div class="Columnas" id="y"><input type="text"><input type="text"><input type="text" id="z2"></div>
+            <div class="Columnas" id="z"><input type="text"><input type="text"><input type="text"></div>
+            <div class="Columnas"><h1>=</h1><h1>=</h1><h1 id="z3">=</H1></div>
+            <div class="Columnas" id="igual"><input type="text"><input type="text"><input type="text" id="z4"></div>
+        </div>
+    </div>
+    <div class="calcular" id="calcular" style="display: none;"><button onclick="mostrarmatrices()">Calcular</button></div>
+    <div class="matrices" id="matrices" style="display: none;">
+        <div class="Ax">
+            <div class="matrizAx">
+                <div class="ColumnasAx"><h1></h1><h1></h1><h1 class="OC"></h1></div>
+                <div class="ColumnasAx"><h1></h1><h1></h1><h1 class="OC"></h1></div>
+                <div class="ColumnasAx"><h1 class="OC"></h1><h1 class="OC"></h1><h1 class="OC"></h1></div>
+            </div>
+        </div>
+        <div class="Ay">
+            <div class="matrizAy">
+                <div class="ColumnasAy"><h1></h1><h1></h1><h1 class="OC"></h1></div>
+                <div class="ColumnasAy"><h1></h1><h1></h1><h1 class="OC"></h1></div>
+                <div class="ColumnasAy"><h1 class="OC"></h1><h1 class="OC"></h1><h1 class="OC"></h1></div>
+            </div>
+        </div>
+        <div class="OC" id="Az">
+            <div class="matrizAz">
+                <div class="ColumnasAz"><h1></h1><h1></h1><h1></h1></div>
+                <div class="ColumnasAz"><h1></h1><h1></h1><h1></h1></div>
+                <div class="ColumnasAz"><h1></h1><h1></h1><h1></h1></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="resultado" id="resultado" style="">
+        <div id="res-x"><h1>X = </H1><h2></h2></div>
+        <div id="res-y"><h1>Y = </h1><h2></h2></div>
+        <div class="OC" id="res-z"><h1>Z = </H1><h2></h2></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
