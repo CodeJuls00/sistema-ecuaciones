@@ -5,6 +5,8 @@ function ocultar(){
     let elementos = document.querySelectorAll('.OC');
     elementos.forEach(el => {el.classList.add= 'oculto';});
 
+    let celdasExtras = document.querySelectorAll('.extra');
+    celdasExtras.forEach(el => { el.style.display = 'none'; });
 
     document.getElementById('z1').style.display = 'none';
     document.getElementById('z2').style.display = 'none';
@@ -19,6 +21,9 @@ function mostrar(){
     reiniciar();
     let elementos = document.querySelectorAll('.OC');
     elementos.forEach(el => {el.classList.remove= 'oculto';});
+    
+    let celdasExtras = document.querySelectorAll('.extra');
+    celdasExtras.forEach(el => { el.style.display = 'flex'; });
 
     document.getElementById('z1').style.display = 'flex';
     document.getElementById('z2').style.display = 'flex';
